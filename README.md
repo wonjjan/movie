@@ -21,13 +21,13 @@ for i in soup.select(".lst_dsc")[:10]:
         관람등급 = "없음"     
     B = i.select(".info_txt1 > dd")     
     참여자수 = i.select_one(".num2 > em").text      
-    개요 = 제거(B[0].text)
-    영화감독 = 제거(B[1].text)
-    A = 개요.split("|")
-    영화장르 = A[0]
-    상영시간 = A[1]
-    개봉날짜 = A[2]
-    영화.append([영화제목,영화평점,관람등급,참여자수,영화감독,영화장르,상영시간,개봉날짜])
+    개요 = 제거(B[0].text)      
+    영화감독 = 제거(B[1].text)        
+    A = 개요.split("|")       
+    영화장르 = A[0]     
+    상영시간 = A[1]     
+    개봉날짜 = A[2]     
+    영화.append([영화제목,영화평점,관람등급,참여자수,영화감독,영화장르,상영시간,개봉날짜])        
 while True:
     print("="*30)
     print("최신영화 top10")
