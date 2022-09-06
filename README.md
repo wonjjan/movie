@@ -11,7 +11,7 @@ def 제거(st):
         st = st.replace(i,"")
     return st
 
-영화 = []
+ss영화 = []
 
 for i in soup.select(".lst_dsc")[:10]:
     영화제목 = i.select_one(".tit > a").text
