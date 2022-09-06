@@ -6,8 +6,6 @@ import os
 res = requests.get("https://movie.naver.com/movie/running/current.naver#")
 soup = BeautifulSoup(res.text,"html.parser")
 
-# soup.selelct 의 결과 : 태그 클래스 인스턴스들의 리스트
-
 def 제거(st):
     for i in "\r\n\t":
         st = st.replace(i,"")
