@@ -14,13 +14,13 @@ def 제거(st):
 ss영화 = []
 
 for i in soup.select(".lst_dsc")[:10]:
-    영화제목 = i.select_one(".tit > a").text
-    영화평점 = i.select_one(".num").text
-    관람등급 = i.select_one("span").text
-    if not 관람등급:
-        관람등급 = "없음"
-    B = i.select(".info_txt1 > dd")
-    참여자수 = i.select_one(".num2 > em").text
+    영화제목 = i.select_one(".tit > a").text    
+    영화평점 = i.select_one(".num").text        
+    관람등급 = i.select_one("span").text        
+    if not 관람등급:        
+        관람등급 = "없음"     
+    B = i.select(".info_txt1 > dd")     
+    참여자수 = i.select_one(".num2 > em").text      
     개요 = 제거(B[0].text)
     영화감독 = 제거(B[1].text)
     A = 개요.split("|")
